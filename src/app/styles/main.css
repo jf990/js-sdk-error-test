@@ -1,0 +1,37 @@
+body {
+  color: #262626;
+  background-color: #eeeeee;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4; }
+
+.logo {
+  display: inline; }
+
+.site-nav {
+  display: inline; }
+
+.site-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.site-nav ul li {
+  display: inline; }
+
+.nav-item {
+  padding: 8px 12px;
+  color: #2e3759;
+  background-color: #cfcfcf;
+  text-decoration: none; }
+
+.nav-item:hover {
+  color: #8e97db;
+  background-color: #535353; }
+
+.site-search {
+  display: inline;
+  float: right; }
+
+/*# sourceMappingURL=main.css.map */

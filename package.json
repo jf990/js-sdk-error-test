@@ -1,0 +1,49 @@
+{
+  "name": "js-sdk-error-test",
+  "version": "0.0.2",
+  "description": "JS Error Test: demonstrate proper way to handle errors.",
+  "author": "John Foster",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "front-end",
+    "skeleton",
+    "npm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jf990/npm-site-skeleton"
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "dateformat": "latest",
+    "intern": "latest",
+    "graceful-fs": "latest",
+    "highlight.js": "latest",
+    "jquery": "latest",
+    "lodash": "latest",
+    "node-sass": "latest",
+    "npm-run-all": "latest",
+    "parallelshell": "latest",
+    "path": "latest",
+    "requirejs": "latest",
+    "rimraf": "latest",
+    "rsync": "latest",
+    "shelljs": "latest",
+    "watch": "latest"
+  },
+  "scripts": {
+    "//": "--------------------------------------------------------------------",
+    "remodule": "rimraf node_modules && npm install",
+    "clean": "rimraf ./dist && rimraf ./public",
+    "env": "env",
+    "test-unit": "intern-client config=tests/intern",
+    "test-fn": "intern-runner config=tests/intern",
+    "test-all": "npm-run-all test-unit test-fn",
+    "start": "npm-run-all test-unit clean build build:watch",
+    "build": "node bin/build-site.js './src/app' './public'",
+    "reload-watch": "node bin/watch-site.js './public'",
+    "build:watch": "watch 'npm run build' ./src",
+    "dev": "npm-run-all build build:watch"
+  }
+}
